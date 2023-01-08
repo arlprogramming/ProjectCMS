@@ -23,7 +23,7 @@ export default function App() {
             <Routes>
               <Route path={"/"} element={<Home />} />
               <Route path="/addemployee" element={<AddEmployee />} />
-              <Route path="/addemployee" element={<ListEmployee />} />
+              <Route path="/listemployee" element={<ListEmployee />} />
             </Routes>
           </div>
         </div>
