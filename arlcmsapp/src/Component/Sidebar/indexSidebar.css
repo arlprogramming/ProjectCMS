@@ -32,13 +32,6 @@ body {
   text-align: center; */
 }
 
-.containerr {
-  width: 100%;
-  margin-left: 2rem;
-  margin-top: 2rem;
-  color: black;
-}
-
 .title {
   font-size: 3em;
 }
@@ -70,6 +63,7 @@ body {
   background-color: rgba(22, 22, 22, 1);
   height: 100%;
   overflow: auto;
+  color: rgb(240, 169, 81);
 }
 
 /* Mengatur jarak icons - tulisan di sidebarItem */

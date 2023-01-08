@@ -3,11 +3,10 @@ import "./Component/Sidebar/indexSidebar.css";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import AddEmployee from "./Component/Pages/AddEmployee/AddEmployee";
 import Home from "./Component/Pages/Home/Home";
-import ListEmployee from "./Component/Pages/AddEmployee/listEmployee";
 
 import React from "react";
+import AddEmployee from "./Component/Pages/AddEmployee/AddEmployee";
 
 export default function App() {
   return (
@@ -19,11 +18,11 @@ export default function App() {
         {/* ------------------------------------------main--------------------------------- */}
         <div className="main">
           <Sidebar />
-          <div className="container-menu">
+          <div className="container">
             <Routes>
               <Route path={"/"} element={<Home />} />
               <Route path="/addemployee" element={<AddEmployee />} />
-              <Route path="/listemployee" element={<ListEmployee />} />
+              {/* <Route path="/listemployee" element={<ListEmployee />} />  */}
             </Routes>
           </div>
         </div>
