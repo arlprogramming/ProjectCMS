@@ -26,11 +26,19 @@ body {
     url("../Assets/svg/logo.svg");
   background-size: cover;
   background-position: center;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
+  text-align: center; */
 }
+
+.containerr {
+  width: 100%;
+  margin-left: 2rem;
+  margin-top: 2rem;
+  color: black;
+}
+
 .title {
   font-size: 3em;
 }

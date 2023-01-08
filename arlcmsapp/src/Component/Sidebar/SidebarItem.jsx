@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import { Nav } from "react-bootstrap";
 
 export default function SidebarItem({ item }) {
   const [open, setOpen] = useState(false);
@@ -25,10 +27,16 @@ export default function SidebarItem({ item }) {
     );
   } else {
     return (
-      <a href={item.path || "#"} className="sidebar-item plain">
-        {item.icon && <i className={item.icon}></i>}
-        {item.title}
-      </a>
+      <Nav className="me-auto">
+        <Nav.Link
+          as={Link}
+          to={item.path || "#"}
+          className="sidebar-item plain"
+        >
+          {item.icon && <i className={item.icon}></i>}
+          {item.title}
+        </Nav.Link>
+      </Nav>
     );
   }
 }
