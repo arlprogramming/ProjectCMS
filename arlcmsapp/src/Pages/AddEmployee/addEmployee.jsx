@@ -38,7 +38,7 @@ export default function AddEmployee() {
   return (
     <div>
       <form
-        className="w-[500px] p-6 flex flex-col gap-4"
+        className="w-[500px] p-6 flex  gap-4"
         onSubmit={handleSubmit}
         autoComplete="off"
       >
