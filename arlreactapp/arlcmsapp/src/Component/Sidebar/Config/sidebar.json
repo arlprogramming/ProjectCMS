@@ -109,7 +109,7 @@
       },
       {
         "title": "ListEmployee",
-        "path": "/addemployee/listemployee"
+        "path": "/addemployee/list"
       }
     ]
   },
