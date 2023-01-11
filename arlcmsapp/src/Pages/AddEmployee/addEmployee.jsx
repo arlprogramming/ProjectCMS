@@ -21,7 +21,7 @@ export default function AddEmployee() {
       namalengkap: namalengkap,
       nik: nik,
       alamat: alamat,
-      createdAt: Date.now(),
+      createdAt: Date.now().format("dd-MM-yyy"),
       createdBy: "Rully",
     })
       .then((res) => {
@@ -38,7 +38,7 @@ export default function AddEmployee() {
   return (
     <div>
       <form
-        className="w-[500px] p-6 flex  gap-4"
+        className="w-[500px] p-6 flex flex-col gap-4"
         onSubmit={handleSubmit}
         autoComplete="off"
       >
