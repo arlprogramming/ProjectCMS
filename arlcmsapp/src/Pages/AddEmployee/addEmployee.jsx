@@ -21,7 +21,7 @@ export default function AddEmployee() {
       namalengkap: namalengkap,
       nik: nik,
       alamat: alamat,
-      createdAt: Date.now().format("dd-MM-yyy"),
+      createdAt: Date.now(),
       createdBy: "Rully",
     })
       .then((res) => {
@@ -36,17 +36,17 @@ export default function AddEmployee() {
     e.target.alamat.value = "";
   };
   return (
-    <div>
+    <div className="overflow-auto">
       <form
-        className="w-[500px] p-6 flex flex-col gap-4"
+        className="w-[500px]  p-6 flex flex-col gap-4"
         onSubmit={handleSubmit}
         autoComplete="off"
       >
-        <div className="flex gap-2 justify-between items-center">
+        <div className="flex gap-2 justify-between items-center ">
           <label htmlFor="namalengkap">Full Name</label>
           <input
             type="text"
-            className="h-10 px-3 border-[1px] border-gray-300 rounded-md w-[250px]"
+            className="h-10 px-3 border-[1px] border-gray-300 rounded-md w-[250px] text-black"
             id="namalengkap"
           />
         </div>
@@ -55,7 +55,7 @@ export default function AddEmployee() {
           <label htmlFor="nik">NIK</label>
           <input
             type="text"
-            className="h-10 px-3 border-[1px] border-gray-300 rounded-md w-[250px]"
+            className="h-10 px-3 border-[1px] border-gray-300 rounded-md w-[250px] text-black"
             id="nik"
           />
         </div>
@@ -64,7 +64,7 @@ export default function AddEmployee() {
           <label htmlFor="alamat">Alamat</label>
           <textarea
             type="text"
-            className="h-[200px] p-3 border-[1px] border-gray-300 rounded-md w-[250px]"
+            className="h-[200px] p-3 border-[1px] border-gray-300 rounded-md w-[250px] text-black"
             id="alamat"
           />
         </div>
