@@ -118,12 +118,12 @@
     "icon": "bi-view-list",
     "childrens": [
       {
-        "title": "Search",
-        "path": "/search"
+        "title": "Basic",
+        "path": "/basicreact"
       },
       {
-        "title": "History",
-        "path": "/history"
+        "title": "Redux",
+        "path": "/redux"
       }
     ]
   },
