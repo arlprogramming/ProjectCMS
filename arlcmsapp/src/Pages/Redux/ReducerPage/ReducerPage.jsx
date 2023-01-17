@@ -5,7 +5,7 @@ import { Tambah, Kurang } from "../Action/Action";
 export default function ReducerPage() {
   const tampilanData = useSelector((state) => state.Reducer);
   //const [count, setCount] = useState(tampilanData.nilai);
-  console.log(count);
+  //console.log(count);
   const dispatch = useDispatch();
   return (
     <div>

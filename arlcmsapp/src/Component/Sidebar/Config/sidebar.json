@@ -110,6 +110,29 @@
       {
         "title": "ListEmployee",
         "path": "/addemployee/list"
+      },
+      {
+        "title": "Bank Mandiri",
+        "childrens": [
+          {
+            "title": "Ant",
+            "childrens": [
+              {
+                "title": "AntTable",
+                "path": "/anttable"
+              }
+            ]
+          },
+          {
+            "title": "Bootstrap",
+            "childrens": [
+              {
+                "title": "Bootstrap",
+                "path": "/bootstrap"
+              }
+            ]
+          }
+        ]
       }
     ]
   },
