@@ -1,0 +1,7 @@
+.nav-bar {
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  /* background-color: rgb(223, 93, 93); */
+}

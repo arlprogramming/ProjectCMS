@@ -22,7 +22,7 @@ export default function App() {
       {/* ------------------------------------------main--------------------------------- */}
       <div className="main">
         <Sidebar />
-        <div className="container overflow-auto">
+        <div className="container-app overflow-auto">
           <Routes>
             <Route path={"/"} element={<Home />} />
 

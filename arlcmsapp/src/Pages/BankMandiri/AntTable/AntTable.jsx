@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Input, Table } from "antd";
 
-export default function AntTable() {
+export default function AntTable({ selected }) {
   const [loading, setLoading] = useState(false);
   const [dataSource, setDataSource] = useState([]);
   const [page, setPage] = useState(1);

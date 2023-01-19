@@ -19,11 +19,11 @@ body {
   height: 100vh;
 }
 
-.container {
+.container-app {
   flex-grow: 1;
   padding: 2em;
-  background-image: radial-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)),
-    url("../Assets/svg/logo.svg");
+  /* background-image: radial-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)),
+    url("../Assets/svg/logo.svg"); */
   background-size: cover;
   background-position: center;
   /* display: flex;
