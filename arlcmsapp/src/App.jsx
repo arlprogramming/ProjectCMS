@@ -12,6 +12,9 @@ import Basicreact from "./Pages/BasicReact/Basicreact";
 import ReducerPage from "./Pages/Redux/ReducerPage/ReducerPage";
 import AntTable from "./Pages/BankMandiri/AntTable/AntTable";
 import Bootstrap from "./Pages/BankMandiri/Bootstrap/Bootstrap";
+import AddCustomer from "./Pages/BankMandiri/AddCustomer/AddCustomer";
+import { EditModal } from "./Pages/BankMandiri/EditCustomer/EditCustomer";
+import { AddModal } from "./Pages/BankMandiri/AddCustomer/AddModal";
 
 export default function App() {
   return (
@@ -32,6 +35,9 @@ export default function App() {
             <Route path="/redux" element={<ReducerPage />} />
             <Route path="/anttable" element={<AntTable />} />
             <Route path="/bootstrap" element={<Bootstrap />} />
+            <Route path="/addcustomer" element={<AddCustomer />} />
+            <Route path="/addmodal" element={<AddModal />} />
+            <Route path="/editcustomer/:id" element={<EditModal />} />
 
             <Route path="*" element={<h1>Page Not Found</h1>} />
           </Routes>

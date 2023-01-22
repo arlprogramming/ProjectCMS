@@ -7,23 +7,19 @@ import TableBootstrap from "../Bootstrap/TableBootsrap/TableBootstrap";
 import "./bootstrap.css";
 
 export default function Bootstrap() {
-  const [selected, setSelected] = useState(["Total Debitur Contacted"]);
+  const [selected, setSelected] = useState([""]);
 
-  //----------------------------------------------------Search-------------------------------------------------
-
-  const [dataSearch, setDataSearch] = useState([]);
-
-  console.log(dataSearch);
   return (
     <div>
       <div className="container nav-bar"></div>
-      <h3>Akumulasi Year to Date</h3>
+      <h3>Akumulasi Year to Date </h3>
       <hr />
       <br />
       <div className="row">
         <div className="col-md-3">Akumulasi YTD based on :</div>
         <div className="col-md-4">
           <select
+            id="dataselect"
             className="form-control form-control-sm"
             value={selected}
             onChange={(e) => setSelected(e.target.value)}
@@ -31,6 +27,8 @@ export default function Bootstrap() {
             <option>Total Debitur Contacted</option>
             <option>Total Case</option>
             <option>Suspect(S)</option>
+            <option>Leanne Graham</option>
+            <option>Ervin Howell</option>
           </select>
         </div>
         <div className="col-md-3">
@@ -46,8 +44,7 @@ export default function Bootstrap() {
         </div>
       </div>
       <div className="row">
-        {/* <AntTable selected={selected} /> */}
-        <TableBootstrap />
+        <TableBootstrap selected={selected} />
       </div>
     </div>
   );

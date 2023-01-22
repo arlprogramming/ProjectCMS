@@ -1,0 +1,97 @@
+1. in directory backend ketik npm init -y
+2. install : npm i express mysql2 sequelize cors tedious
+3. membuat index.js di directory backend
+4. ketik ini di index.js :
+
+    import express from "express";
+    import cors from "cors";
+
+    const app = express();
+    app.use(cors());
+    app.use(express.json()); //supaya bisa menerima format json
+
+    app.listen("5000", () => console.log("Server Up and Running")); 
+
+5. Membuat Folder :
+    config,
+    controllers,
+    models,
+    routes
+
+6. Membuat file Database.js di folder config
+7. membuat koneksi di Database.js :
+
+    import { Sequelize } from "sequelize";
+
+    const db = new Sequelize("crud_db", "root", "", {
+        host: "localhost",
+    dialect: "mysql",
+    });
+
+    export default db;
+
+8. Membuat file UserModel.js di folder models => (ini untuk membuat struktur bagaimana data kita tersimpan ke database)
+9. membuat struktur (model) yang akan di sambungkan ke database di UserModel.js :
+
+    import { Sequelize } from "sequelize";
+    import db from "../config/Database";
+
+    const { DataTypes } = Sequelize;
+
+    const User = db.define(
+        "users",
+        {
+            nama: DataTypes.STRING,
+            email: DataTypes.STRING,
+            gender: DataTypes.STRING,
+        },
+        {
+            freezeTableName: true,
+        }
+    );
+
+    export default User;
+
+10. membuat fungsi di file UserModel.js untuk men generate jika table tidak ada di database :
+    (async () => {
+        await db.sync();
+    })();
+
+11. membuat file UserController.js di folder Controller
+    ketik :
+
+    import User from "../models/UserModel";
+
+    export const getUsers = async (req, res) => {
+        try {
+            const response = await User.findAll();
+            res.status(200).json(response);
+        } catch (error) {
+            console.log(error.message);
+        }
+    };
+
+12. membuat file UserRoute.js di folder Route => (ini untuk menghandle semua routing url api)
+    import express from "express"
+
+    const router = express.Router();
+
+    export default router;
+
+13. di UserRoute.js tambahkan controller yg sudah dibuat :
+
+    import { getUsers } from "../controllers/UserController";
+
+    lalu membuat endpoint :
+
+    router.get("/users", getUsers);
+
+14. lalu panggil UserRoute.js di index.js
+    
+    import UserRoute from './routes/Userroute.js'
+
+    lalu panggil dengan middleware :
+
+    app.use(UserrRoute);
+
+15. 

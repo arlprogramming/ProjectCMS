@@ -1,0 +1,27 @@
+GET http://localhost:5000/users
+
+###
+GET http://localhost:5000/users/1
+
+###
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "firstName" : "Kyrie",
+    "lastName" : "Irving",
+    "email" : "kyrieirving@arlcmsapp.com"
+}
+
+###
+PATCH http://localhost:5000/users/5
+Content-Type: application/json
+
+{
+    "firstName" : "Stephen",
+    "lastName" : "Curry",
+    "email" : "stephencurry@arlcmsapp.com"
+}
+
+###
+DELETE http://localhost:5000/users/6

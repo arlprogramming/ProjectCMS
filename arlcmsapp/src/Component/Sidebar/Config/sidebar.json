@@ -131,6 +131,19 @@
                 "path": "/bootstrap"
               }
             ]
+          },
+          {
+            "title": "Customer",
+            "childrens": [
+              {
+                "title": "Add Customer",
+                "path": "/addcustomer"
+              },
+              {
+                "title": "Edit Customer",
+                "path": "/editcustomer"
+              }
+            ]
           }
         ]
       }

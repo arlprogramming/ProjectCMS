@@ -4,29 +4,37 @@ import Column from "antd/es/table/Column";
 import React, { useState, useEffect } from "react";
 import "./BootstrapCss.css";
 
-export default function TableBootstrap({ dataSearch }) {
+export default function TableBootstrap({ selected }) {
   const [loading, setLoading] = useState(false);
   const [dataSource, setDataSource] = useState([]);
   const [sort, setSort] = useState("ASC");
+  const [search, setSearch] = useState([]);
+  const API_URL = "https://jsonplaceholder.typicode.com/users";
+
+  //console.log(selected);
 
   useEffect(() => {
     setLoading(true);
-    fetch("https://jsonplaceholder.typicode.com/users") //https://jsonplaceholder.typicode.com/users
-      .then((response) => response.json())
-      .then((json) => {
-        setDataSource(json);
-      })
-      .catch((err) => {
-        alert(`Error adalah : ${err}`);
-      })
-      .finally(() => {
-        setLoading(false);
-      });
-  }, []);
+    //console.log(selected);
+    {
+      //console.log(selected);
+      fetch(`${API_URL}/?name=${selected}`) //https://jsonplaceholder.typicode.com/users
+        .then((response) => response.json())
+        .then((json) => {
+          setDataSource(json);
+        })
+        .catch((err) => {
+          alert(`Error adalah : ${err}`);
+        })
+        .finally(() => {
+          setLoading(false);
+        });
+    }
+  }, [selected]);
 
   const sortOnclick = (column) => {
     //return alert(column);
-    console.log(column);
+    //console.log(column);
     if (sort === "ASC") {
       const sorted = [...dataSource].sort((a, b) =>
         a[column] > b[column] ? 1 : -1
