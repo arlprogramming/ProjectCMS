@@ -104,15 +104,46 @@
     "icon": "bi-info-circle-fill",
     "childrens": [
       {
+        "title": "AddEmloyee",
+        "path": "/addemployee"
+      },
+      {
+        "title": "ListEmployee",
+        "path": "/addemployee/list"
+      },
+      {
         "title": "Bank Mandiri",
         "childrens": [
           {
-            "title": "Akumulasi Year to Date",
-            "path": "/bootstrap"
+            "title": "Ant",
+            "childrens": [
+              {
+                "title": "AntTable",
+                "path": "/anttable"
+              }
+            ]
+          },
+          {
+            "title": "Bootstrap",
+            "childrens": [
+              {
+                "title": "Bootstrap",
+                "path": "/bootstrap"
+              }
+            ]
           },
           {
             "title": "Customer",
-            "path": "/customer"
+            "childrens": [
+              {
+                "title": "Add Customer",
+                "path": "/addcustomer"
+              },
+              {
+                "title": "Edit Customer",
+                "path": "/editcustomer"
+              }
+            ]
           }
         ]
       }
@@ -122,6 +153,10 @@
     "title": "Advance",
     "icon": "bi-view-list",
     "childrens": [
+      {
+        "title": "Basic",
+        "path": "/basicreact"
+      },
       {
         "title": "Redux",
         "path": "/redux"
